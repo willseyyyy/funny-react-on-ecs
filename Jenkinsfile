@@ -128,12 +128,12 @@ pipeline {
     success {
       emailext subject: "✅ Pipeline Success: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                body: "Deployed image: $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPO:$IMAGE_TAG",
-               to: "you@example.com"
+               to: "evansenigo5@gmail.com"
     }
     failure {
       emailext subject: "❌ Pipeline Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                body: "Check Jenkins console output for details.",
-               to: "you@example.com"
+               to: "evansenigo5@gmail.com"
     }
     always {
       cleanWs()
